@@ -1,3 +1,8 @@
+## Portfolio Website
+
+Used to display skills and accolades created and learend throughout my career.
+Check below for instructions on how to create and use Create React App.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
