@@ -14,11 +14,13 @@ body {
   padding: 0;
 }
 
+.container {
+  display: flex;
+}
+
 .nav-bar {
-  background-color: rgba(0, 26, 255, 0.219);
-  position: fixed;
+  /* position: fixed; */
   background-color: var(--bg-primary);
-  transition: 200ms ease;
 }
 
 .nav-list {
@@ -35,19 +37,14 @@ body {
   font-size: 16px;
   font-family: "Rubik", sans-serif;
   font-weight: 400;
-  padding-bottom: 96px;
   width: 100%;
-  height: 40px;
-}
-
-.nav-list-item:last-child {
-  padding-bottom: 90px;
+  height: 100px;
 }
 
 .nav-link {
   display: flex;
   align-items: center;
-  height: 136px;
+  height: inherit;
   color: var(--text-primary);
   text-decoration: none;
   font-size: 14px;
@@ -110,6 +107,11 @@ body {
     bottom: 0;
     width: 100vw;
     height: 5rem;
+    position: fixed;
+  }
+
+  .nav-toggle {
+    display: none;
   }
 
   .logo {
@@ -131,10 +133,29 @@ body {
   .nav-bar {
     width: 6rem;
     height: 100vh;
+    transition: 200ms ease;
+  }
+
+  .hide-nav-bar {
+    display: none;
   }
 
   .nav-bar:hover {
-    width: 16rem;
+    width: 15rem;
+  }
+
+  .nav-toggle {
+    margin: 5px 15px;
+    font-size: 30px;
+    color: var(--bg-secondary);
+    height: min-content;
+    transition: 0.3s ease-in-out;
+  }
+
+  .nav-toggle:hover {
+    cursor: pointer;
+    font-size: 35px;
+    transform: scale(1.1) rotate(180deg);
   }
 
   .nav-bar:hover .nav-link-text {
@@ -159,7 +180,7 @@ body {
 
   .nav-bar:hover .top-link {
     filter: grayscale(0%) opacity(1);
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
     color: var(--text-secondary);
   }
 
